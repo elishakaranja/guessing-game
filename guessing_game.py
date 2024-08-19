@@ -20,7 +20,14 @@ def guess_number():
                     print(f"Congratulations! You guessed the correct number in {attempts} attempts!")
                     break
 
-          
+            except ValueError:
+                print("Invalid input. Please enter a valid number.")
+
+        # ask if user wants to play again 
+        replay = input("Do you want to play again? (yes/no): ").strip().lower()
+        if replay != 'yes':
+            print("Thanks for playing!")
+            break
 
 if __name__ == "__main__":
     guess_number()
